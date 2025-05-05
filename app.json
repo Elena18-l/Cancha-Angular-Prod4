@@ -16,16 +16,19 @@
       "supportsTablet": true,
       "entitlements": {
         "aps-environment": "production"
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+      },
+      "android": {
+        "adaptiveIcon": {
+          "foregroundImage": "./assets/adaptive-icon.png",
+          "backgroundColor": "#ffffff"
+        }
+      },
+      "web": {
+        "favicon": "./assets/favicon.png"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "android": {
+      "package": "com.anonymous.canchaangular"
     }
   }
-}
 }
