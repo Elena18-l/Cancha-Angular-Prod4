@@ -42,16 +42,8 @@ export default function App() {
     return unsubscribe; // Limpieza al desmontar
   }, []);
 
-  return (
-    <SafeAreaProvider>
-      <View style={{ flex: 1 }}>
-        <AppNavigator />
-        <Footer />
-        <StatusBar style="auto" />
-      </View>
-    </SafeAreaProvider>
-  );
-}
+ 
+
 
 //escuchar mensajes si tienes la app cerrada o en segundo plano. Esto está en index.js
 
