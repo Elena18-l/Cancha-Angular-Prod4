@@ -13,7 +13,9 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "entitlements": {
+        "aps-environment": "production"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,4 +27,5 @@
       "favicon": "./assets/favicon.png"
     }
   }
+}
 }
