@@ -1,4 +1,4 @@
-package com.anonymous.canchaangular
+package com.cancha_angular.mobile
 
 import android.os.Build
 import android.os.Bundle
