@@ -6,6 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "googleServicesFile": "./android/app/google-services.json",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
@@ -19,10 +20,44 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.canchaangular.mobile"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "permissions": [
+      "NOTIFICATIONS"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "b0dced3d-4fc8-4e14-b4c9-3a5de6311ca4"
+      }
     }
+  },
+  "plugins": [
+    [
+      "expo-build-properties",
+      {
+        "android": {
+          "compileSdkVersion": 34,
+          "targetSdkVersion": 34,
+          "minSdkVersion": 23
+        }
+      }
+    ]
+  ],
+  "web": {
+    "favicon": "./assets/favicon.png"
+  },
+  "extra": {
+    "eas": {
+      "projectId": "b0dced3d-4fc8-4e14-b4c9-3a5de6311ca4"
+    },
+    
+      "build": {
+        "android": {
+          "buildType": "apk"
+        }
+      }
+    
+    
   }
 }

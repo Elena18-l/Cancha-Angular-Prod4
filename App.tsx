@@ -4,9 +4,24 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { enableScreens } from 'react-native-screens';
 import AppNavigator from './navigation/AppNavigator';
 import Footer from './components/Footer';
-
+import { useEffect } from 'react';
+import { requestUserPermission, getFcmToken } from './config/firebase.config';
+import messaging from '@react-native-firebase/messaging';
+import { Alert } from 'react-native';
 
 enableScreens();
+useEffect(() => {
+
+  requestUserPermission();
+  getFcmToken();
+
+  // Escucha mensajes en primer plano
+  const unsubscribe = messaging().onMessage(async remoteMessage => {
+    Alert.alert('Notificación recibida', JSON.stringify(remoteMessage.notification?.title));
+  });
+
+  return unsubscribe;
+}, []);
 
 export default function App() {
   return (
